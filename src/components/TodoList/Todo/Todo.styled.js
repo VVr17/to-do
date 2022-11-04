@@ -12,11 +12,8 @@ export const TextWrapper = styled.div`
   p {
     margin-top: 0;
     margin-bottom: 0;
-    margin-right: 24px;
-    margin-left: 24px;
-
-    /* .TodoList__item--completed & {
-    text-decoration: line-through;
-  } */
+    margin-right: ${p => p.theme.space[3]}px;
+    margin-left: ${p => p.theme.space[3]}px;
+    text-decoration: ${p => (p.completed ? 'line-through' : 'none')};
   }
 `;

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Title = styled.h2`
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const Form = styled.form`
@@ -10,24 +10,22 @@ export const Form = styled.form`
   width: 600px;
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  border: 1px solid #333333;
-  border-radius: 4px;
-  margin-bottom: 20px;
+  padding: ${p => p.theme.space[3]}px;
+  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.mainText};
+  border-radius: ${p => p.theme.radii.normal};
+  margin-bottom: ${p => p.theme.space[4]}px;
 `;
 
 export const Text = styled.textarea`
-  $line-height: 16px;
-
-  height: $line-height * 3 + 24px;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  height: ${p => p.theme.space[4]}px * 3 + 24px;
+  padding: ${p => p.theme.space[3]}px;
+  border: ${p => p.theme.borders.normal} ${p => p.theme.colors.borderColor};
+  border-radius: ${p => p.theme.radii.normal};
 
   font: inherit;
-  line-height: $line-height;
+  line-height: ${p => p.theme.space[4]}px;
   letter-spacing: 0.01em;
 
   resize: none;
-  margin-bottom: 12px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;

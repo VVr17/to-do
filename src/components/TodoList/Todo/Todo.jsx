@@ -10,7 +10,7 @@ export const ToDo = ({ text, completed, id }) => {
 
   return (
     <>
-      <TextWrapper>
+      <TextWrapper completed={completed}>
         <input
           type="checkbox"
           checked={completed}

@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Header = styled.header`
-  margin-bottom: 30px;
+  margin-bottom: ${p => p.theme.space[4]}px;
   text-align: center;
 
   h2 {
-    margin-bottom: 16px;
+    margin-bottom: ${p => p.theme.space[3]}px;
   }
 
   div {
@@ -14,13 +14,13 @@ export const Header = styled.header`
   }
 
   p {
-    font-size: 18px;
-    font-size: 500;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeight.semiBold};
+    padding-top: ${p => p.theme.space[2]}px;
+    padding-bottom: ${p => p.theme.space[2]}px;
 
     :not(:last-of-type) {
-      margin-right: 20px;
+      margin-right: ${p => p.theme.space[4]}px;
     }
   }
 `;

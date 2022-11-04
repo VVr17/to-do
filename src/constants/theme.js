@@ -16,8 +16,8 @@ export const theme = Object.freeze({
     mainBackgroundColor: '#f5f4fa',
     accentBackgroundColor: '#03453b',
     backgroundContactCardColor: 'rgba(247, 227, 201, 0.2)',
-    bgErrorColor: ' rgba(142, 22, 0, 0.08)',
     btnShadowColor: 'rgba(0, 0, 0, 0.15)',
+    borderColor: 'rgba(33, 33, 33, 0.2)',
   },
 
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
@@ -31,29 +31,9 @@ export const theme = Object.freeze({
   fontSizes: {
     xs: '12px',
     s: '16px',
-    m: '24px',
+    m: '20px',
     l: '32px',
     xl: '64px',
-  },
-
-  // lineHeights: {
-  //   body: 1.5,
-  //   heading: 1.125,
-  // },
-
-  breakpoints: [
-    `${breakpoints[0]}px`,
-    `${breakpoints[1]}px`,
-    `${breakpoints[2]}px`,
-  ],
-
-  mediaQueries: {
-    smallOnly: `@media screen and (max-width: ${breakpoints[1] - 0.02}px)`,
-    medium: `@media screen and (min-width: ${breakpoints[1]}px)`,
-    mediumOnly: `@media screen and (min-width: ${
-      breakpoints[1]
-    }px) and (max-width: ${breakpoints[2] - 0.02}px)`,
-    large: `@media screen and (min-width: ${breakpoints[2]}px)`,
   },
 
   borders: {

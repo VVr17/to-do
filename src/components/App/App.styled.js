@@ -4,8 +4,8 @@ export const Container = styled.div`
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-top: ${p => p.theme.space[2]}px;
+  padding-bottom: ${p => p.theme.space[2]}px;
+  padding-left: ${p => p.theme.space[2]}px;
+  padding-right: ${p => p.theme.space[2]}px;
 `;

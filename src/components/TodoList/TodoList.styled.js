@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const Title = styled.h2`
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: ${p => p.theme.space[3]}px;
 `;
 
 export const TodoListStyled = styled.ul`
@@ -12,33 +12,15 @@ export const TodoListStyled = styled.ul`
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 24px;
+  grid-gap: ${p => p.theme.space[3]}px;
 
   li {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border: 1px solid #333333;
-    border-radius: 4px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-
-      background-color: $green;
-
-      transform: scaleX(0);
-      transition: transform 250ms $timing-function;
-    }
-
-    /* &--completed::before {
-      transform: scaleX(1);
-    } */
+    padding: ${p => p.theme.space[3]}px;
+    border: ${p => p.theme.borders.normal} ${p => p.theme.colors.mainText};
+    border-radius: ${p => p.theme.radii.normal};
   }
 `;
