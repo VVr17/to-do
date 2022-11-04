@@ -1,13 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'modern-normalize/modern-normalize.css';
-import App from './App';
-// import './styles.css';
-import './styles/base.scss';
+import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from '@emotion/react';
+import { theme } from 'constants/theme';
+import { App } from 'components/App/App';
+import 'react-toastify/dist/ReactToastify.css';
+import './index.css';
+import { Provider } from 'react-redux';
+import { store } from 'redux/store';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root'),
+    {/* wrap Redux Provider over App */}
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
+  </React.StrictMode>
 );
