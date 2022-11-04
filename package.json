@@ -15,7 +15,6 @@
     "formik": "^2.2.9",
     "modern-normalize": "^0.6.0",
     "nanoid": "^4.0.0",
-    "sass": "^1.55.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@hookform/resolvers": "^2.9.10",

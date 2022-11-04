@@ -10,14 +10,16 @@ export const TodoList = () => {
   const visibleTodos = getVisibleTodos(todos, filter);
 
   return (
-    <TodoListStyled>
+    <>
       <Title> TODO list </Title>
-      {visibleTodos.map(({ id, text, completed }) => (
-        <li key={id}>
-          <ToDo id={id} text={text} completed={completed} />
-        </li>
-      ))}
-    </TodoListStyled>
+      <TodoListStyled>
+        {visibleTodos.map(({ id, text, completed }) => (
+          <li key={id}>
+            <ToDo id={id} text={text} completed={completed} />
+          </li>
+        ))}
+      </TodoListStyled>
+    </>
   );
 };
 

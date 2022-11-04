@@ -1,46 +1,37 @@
 import { nanoid } from 'nanoid';
+import { actions } from './constants';
 
 // create new ItemList
 export const addTodo = text => {
   return {
-    type: 'todos/addTodo',
+    type: actions.addTodo,
     payload: {
       text,
       id: nanoid().slice(0, 10),
       completed: false,
     },
   };
-
-  // setTodos(todos => (todos = [...todos, todo]));
 };
 
 // delete TodoItem from list
 export const deleteTodos = todoId => {
   return {
-    type: 'todos/deleteTodo',
+    type: actions.deleteTodo,
     payload: todoId,
   };
-
-  // setTodos(todos => todos.filter(todo => todo.id !== todoId));
 };
 
 // toggle "Completed" property
 export const toggleCompleted = todoId => {
   return {
-    type: 'todos/toggleCompleted',
+    type: actions.toggleCompleted,
     payload: todoId,
   };
-
-  // setTodos(todos =>
-  //   todos.map(todo =>
-  //     todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
-  //   )
-  // );
 };
 
 export const setStatusFilter = value => {
   return {
-    type: 'todos/setStatusFilter',
+    type: actions.setStatusFilter,
     payload: value,
   };
 };

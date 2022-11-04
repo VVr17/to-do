@@ -7,7 +7,7 @@ import { FilterStyled } from './StatusFilter.styled';
 
 export const Filter = () => {
   const filter = useSelector(getStatusFilter); // to get filter status form state
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // to dispatch action
   const handleStatusFilterChange = value => dispatch(setStatusFilter(value));
 
   return (
