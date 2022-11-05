@@ -3,10 +3,8 @@ export const breakpoints = ['480', '768', '1280'];
 export const theme = Object.freeze({
   colors: {
     white: '#ffffff',
-    red: '#8e1600',
     accent: '#987045',
     secondaryColor: '#00554e',
-    muted: '#f6f6f6',
 
     mainText: '#333333',
     secondaryTextColor: '#ebebeb',
@@ -14,8 +12,6 @@ export const theme = Object.freeze({
     inputText: 'rgba(117, 117, 117, 0.5)',
 
     mainBackgroundColor: '#f5f4fa',
-    accentBackgroundColor: '#03453b',
-    backgroundContactCardColor: 'rgba(247, 227, 201, 0.2)',
     btnShadowColor: 'rgba(0, 0, 0, 0.15)',
     borderColor: 'rgba(33, 33, 33, 0.2)',
   },
@@ -54,4 +50,6 @@ export const theme = Object.freeze({
     second:
       ' 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1)',
   },
+
+  transitionTiming: '250ms cubic-bezier(0.4, 0, 0.2, 1)',
 });

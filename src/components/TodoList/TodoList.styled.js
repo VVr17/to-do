@@ -22,5 +22,6 @@ export const TodoListStyled = styled.ul`
     padding: ${p => p.theme.space[3]}px;
     border: ${p => p.theme.borders.normal} ${p => p.theme.colors.mainText};
     border-radius: ${p => p.theme.radii.normal};
+    box-shadow: ${p => p.theme.boxShadow.first};
   }
 `;

@@ -7,13 +7,15 @@ export const Title = styled.h2`
 
 export const Form = styled.form`
   margin: 0 auto;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   padding: ${p => p.theme.space[3]}px;
   border: ${p => p.theme.borders.normal} ${p => p.theme.colors.mainText};
   border-radius: ${p => p.theme.radii.normal};
   margin-bottom: ${p => p.theme.space[4]}px;
+  box-shadow: ${p => p.theme.boxShadow.first};
 `;
 
 export const Text = styled.textarea`

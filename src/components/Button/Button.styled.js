@@ -24,10 +24,10 @@ export const ButtonStyled = styled.button`
       : p.theme.colors.secondaryColor};
   border-radius: ${p => p.theme.radii.normal};
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color ${p => p.theme.transitionTiming},
+    color 250ms ${p => p.theme.transitionTiming},
+    box-shadow ${p => p.theme.transitionTiming},
+    border-color ${p => p.theme.transitionTiming};
 
   :hover,
   :focus {
