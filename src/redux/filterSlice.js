@@ -5,13 +5,6 @@ const filterInitialState = {
   status: statusFilter.all,
 };
 
-// export const filterReducer = createReducer(filterInitialState, {
-//   [setStatusFilter]: (state, action) => ({
-//     ...state.filters,
-//     status: action.payload,
-//   }),
-// });
-
 const filterSlice = createSlice({
   name: 'todo',
   initialState: filterInitialState,

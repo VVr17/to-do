@@ -13,9 +13,9 @@ export const TodoList = () => {
     <>
       <Title> TODO list </Title>
       <TodoListStyled>
-        {visibleTodos.map(({ id, text, completed }) => (
-          <li key={id}>
-            <ToDo id={id} text={text} completed={completed} />
+        {visibleTodos.map(todo => (
+          <li key={todo.id}>
+            <ToDo todo={todo} />
           </li>
         ))}
       </TodoListStyled>

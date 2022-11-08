@@ -3,7 +3,3 @@ export const statusFilter = Object.freeze({
   active: 'active',
   completed: 'completed',
 });
-
-export const LOCAL_STORAGE_KEY = {
-  todoList: 'todoList',
-};
