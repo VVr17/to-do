@@ -5,9 +5,9 @@ import { Container } from './App.styled';
 import { Filter } from 'components/StatusFilter/StatusFilter';
 import { fetchTodos } from 'redux/operations';
 import { getError, getIsLoading, getTodos } from 'redux/selectors';
+import { Loader } from 'components/Loader/Loader';
 import { TodoEditor } from 'components/TodoEditor/TodoEditor';
 import { TodoList } from 'components/TodoList/TodoList';
-import { Loader } from 'components/Loader/Loader';
 
 export const App = () => {
   const dispatch = useDispatch();

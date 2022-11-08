@@ -7,8 +7,7 @@ const handlePending = state => {
 
 const handleRejected = (state, { payload }) => {
   state.isLoading = false;
-  state.error = null;
-  state.items = payload;
+  state.error = payload;
 };
 
 const todoInitialState = [];
