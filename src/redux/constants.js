@@ -4,9 +4,6 @@ export const statusFilter = Object.freeze({
   completed: 'completed',
 });
 
-export const actions = Object.freeze({
-  addTodo: 'todos/addTodo',
-  deleteTodo: 'todos/deleteTodo',
-  toggleCompleted: 'todos/toggleCompleted',
-  setStatusFilter: 'filter/setStatusFilter',
-});
+export const LOCAL_STORAGE_KEY = {
+  todoList: 'todoList',
+};

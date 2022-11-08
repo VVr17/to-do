@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { addTodo } from 'redux/actions';
 import { Button } from 'components/Button/Button';
 import { Text, Form, Title } from './TodoEditor.styled';
+import { addTodo } from 'redux/todoSlice';
 
 export const TodoEditor = () => {
   const dispatch = useDispatch();

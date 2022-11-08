@@ -1,19 +1,28 @@
-// import { devToolsEnhancer } from '@redux-devtools/extension';
-// import { createStore } from 'redux';
-// import {rootReducer } from './reducer';
 import { configureStore } from '@reduxjs/toolkit';
-import { filterReducer, todoReducer } from './reducer';
+import {
+  persistStore,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import { filterReducer } from './filterSlice';
+import { persistedTodoReducer } from './todoSlice';
 
-// Redux Toolkit
-// combined Reducer
 export const store = configureStore({
   reducer: {
-    todos: todoReducer,
+    todos: persistedTodoReducer,
     filters: filterReducer,
+  },
+  middleware(getDefaultMiddleware) {
+    return getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    });
   },
 });
 
-// Redux
-// to add Redux DevTools
-// const enhancer = devToolsEnhancer();
-// export const store = createStore(rootReducer, enhancer);
+export const persistor = persistStore(store);
