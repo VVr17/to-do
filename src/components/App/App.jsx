@@ -4,16 +4,16 @@ import { AppBar } from 'components/AppBar/AppBar';
 import { Container } from './App.styled';
 import { Filter } from 'components/StatusFilter/StatusFilter';
 import { fetchTodos } from 'redux/operations';
-import { getError, getIsLoading, getTodos } from 'redux/selectors';
+import { selectError, selectIsLoading, selectTodos } from 'redux/selectors';
 import { Loader } from 'components/Loader/Loader';
 import { TodoEditor } from 'components/TodoEditor/TodoEditor';
 import { TodoList } from 'components/TodoList/TodoList';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const todos = useSelector(getTodos);
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const todos = useSelector(selectTodos);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchTodos());

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { addTodo, deleteTodo, fetchTodos, toggleCompleted } from './operations';
 
+// USING IMMER - Immutable state changes
 const handlePending = state => {
   state.isLoading = true;
 };

@@ -1,13 +1,10 @@
 import { ToDo } from 'components/TodoList/Todo/Todo';
 import { useSelector } from 'react-redux';
-import { statusFilter } from 'redux/constants';
-import { getStatusFilter, getTodos } from 'redux/selectors';
+import { selectVisibleTodos } from 'redux/selectors';
 import { Title, TodoListStyled } from './TodoList.styled';
 
 export const TodoList = () => {
-  const todos = useSelector(getTodos);
-  const filter = useSelector(getStatusFilter);
-  const visibleTodos = getVisibleTodos(todos, filter);
+  const visibleTodos = useSelector(selectVisibleTodos);
 
   return (
     <>
@@ -22,14 +19,3 @@ export const TodoList = () => {
     </>
   );
 };
-
-function getVisibleTodos(todos, filterStatus) {
-  switch (filterStatus) {
-    case statusFilter.active:
-      return todos.filter(task => !task.completed);
-    case statusFilter.completed:
-      return todos.filter(task => task.completed);
-    default:
-      return todos;
-  }
-}
